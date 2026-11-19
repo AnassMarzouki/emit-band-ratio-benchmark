@@ -7,6 +7,9 @@ login.txt
 
 # run outputs and downloads
 runs/
+results_v00*/
+emit_check_results/
+mineral_grouping_matrix_20230503.csv
 *.img
 *.hdr
 *.nc

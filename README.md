@@ -18,7 +18,7 @@ eight dryland sites (Morocco, USA, Namibia).
 
 | Folder | Content |
 | --- | --- |
-| `main_script/` | Main processing script used for the paper's results (scene search, download, masking, AUC with block-bootstrap confidence intervals, physics control, HTML report). |
+| `main_script/` | `emit_ratio_check.py` (v0.3.8), the script that produced the paper's results: scene search and download, masking, AUC with block-bootstrap confidence intervals, per-mineral analysis, physics control, HTML reports. |
 | `qgis_workflow_python/` | The manual QGIS workflow automated as six Python scripts (`step1` … `step6`), with its own README. Used as the independent re-implementation in Section 4.6 of the paper. |
 | `figures/` | `plot_library_spectra.py`: Fig. 3, the USGS Spectral Library v7 spectra with the Sentinel-2 and Landsat bands. |
 | `data/` | `site_boxes.geojson`: the study boxes, ready to load in QGIS. |
@@ -32,7 +32,8 @@ eight dryland sites (Morocco, USA, Namibia).
 ```
 python -m venv .venv
 .venv\Scripts\activate          # Windows  (Linux/macOS: source .venv/bin/activate)
-pip install -r qgis_workflow_python/requirements.txt
+pip install -r main_script/requirements.txt              # main script
+pip install -r qgis_workflow_python/requirements.txt     # automated QGIS workflow
 ```
 
 ## Earthdata login
@@ -43,7 +44,7 @@ password on line 2. The scripts read it automatically and never print it.
 
 ## Reproducing the paper
 
-1. **Main results** (Tables 3–5, Figs. 5, 7, 8): see `main_script/README.md`.
+1. **Main results** (Tables 3–6, Figs. 5, 7, 8): see `main_script/README.md` for the exact command.
 2. **Independent re-implementation** (Table 6, Fig. S1): in `qgis_workflow_python/`, set `RUN` in `config.py` to
    one of the listed site/date runs, then run `step1` to `step6` in order (see `qgis_workflow_python/README.md`).
 3. **Fig. 3**: download `ASCIIdata_splib07a.zip` from the USGS Spectral Library Version 7
@@ -67,4 +68,4 @@ If you use this code, please cite the paper (reference to be added on publicatio
 
 ## License
 
-[To be chosen by the author, e.g. MIT.]
+MIT License (see `LICENSE`).

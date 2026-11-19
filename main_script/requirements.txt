@@ -1,0 +1,11 @@
+numpy
+pandas
+scipy
+rasterio
+shapely
+matplotlib
+h5py
+requests
+earthaccess
+pystac-client
+planetary-computer
