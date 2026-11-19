@@ -1,0 +1,8 @@
+numpy
+pandas
+rasterio
+requests
+pystac-client
+planetary-computer
+openpyxl
+matplotlib

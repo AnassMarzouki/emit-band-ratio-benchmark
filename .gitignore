@@ -1,0 +1,19 @@
+# credentials: never commit
+earthdata_login.txt
+earthdata_login.txt.txt
+credentials.txt
+login.txt
+*request.json
+
+# run outputs and downloads
+runs/
+*.img
+*.hdr
+*.nc
+*.tif
+ASCIIdata_splib07a.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
